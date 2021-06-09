@@ -1,0 +1,13 @@
+<div class="todo-list">
+  <div class="new-todo">
+    <input [(ngModel)]="textToAdd" placeholder="new todo" />
+    <button (click)="addTodo()">add</button>
+    <button (click)="getTodos()">refresh</button>
+  </div>
+  <app-todo-item
+    *ngFor="let todo of todos"
+    [todo]="todo"
+    (save)="saveTodo($event)"
+    (delete)="deleteTodo($event)"
+  ></app-todo-item>
+</div>

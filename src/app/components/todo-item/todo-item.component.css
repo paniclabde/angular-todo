@@ -1,0 +1,15 @@
+div.todo {
+  border-bottom: 1px dashed #ccc;
+  margin-top: 5px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0 5px 0;
+}
+
+span {
+  text-align: left;
+  flex: 1 100%;
+  margin-left: 5px;
+}

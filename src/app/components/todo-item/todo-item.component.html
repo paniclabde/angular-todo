@@ -1,0 +1,14 @@
+<div class="todo" *ngIf="todo">
+  <input
+    id="todo-done"
+    type="checkbox"
+    [(ngModel)]="todo.done"
+    (change)="saveTodo()"
+  />
+  <span *ngIf="!editMode" (click)="editMode = true">{{ todo.text }}</span>
+  <span *ngIf="editMode">
+    <input [(ngModel)]="todo.text" />
+    <button (click)="saveTodo()">save</button>
+  </span>
+  <button (click)="deleteTodo()">delete</button>
+</div>

@@ -1,0 +1,22 @@
+div.todo-list {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid #ccc;
+}
+
+div.new-todo {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+div.new-todo > input {
+  flex: 1 100%;
+}
+
+div.new-todo > button {
+  margin-left: -1px;
+}
