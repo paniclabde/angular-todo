@@ -26,7 +26,7 @@ export class TodoListComponent implements OnInit {
   }
 
   addTodo() {
-    this.todoApiService.addTodo(new Todo(this.textToAdd)).subscribe((todo) => this.todos.push(todo));
+    this.todoApiService.addTodo({ text: this.textToAdd, done: false }).subscribe((todo) => this.todos.push(todo));
     this.textToAdd = "";
   }
 

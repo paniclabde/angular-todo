@@ -1,9 +1,5 @@
-export class Todo {
-  id: number | undefined;
-  text: string | undefined;
-  done: boolean = false;
-
-  constructor(text: string) {
-    this.text = text;
-  }
+export interface Todo {
+  id?: number;
+  text: string;
+  done: boolean;
 }

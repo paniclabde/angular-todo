@@ -1,9 +1,19 @@
 <div class="todo-list">
   <div class="new-todo">
-    <input [(ngModel)]="textToAdd" placeholder="new todo" />
-    <button (click)="addTodo()">add</button>
+    <input
+      [(ngModel)]="textToAdd"
+      placeholder="new todo"
+      required
+      minlength="3"
+      #newtodo="ngModel"
+    />
+    <button (click)="addTodo()" [disabled]="!newtodo.valid">add</button>
     <button (click)="getTodos()">refresh</button>
   </div>
+  <div class="error" [hidden]="newtodo.valid || newtodo.pristine">
+    please enter at least 3 characters
+  </div>
+  <hr />
   <app-todo-item
     *ngFor="let todo of todos"
     [todo]="todo"

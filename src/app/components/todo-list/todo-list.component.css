@@ -5,7 +5,7 @@ div.todo-list {
   border: 1px solid #ccc;
 }
 
-div.new-todo {
+.new-todo {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -13,10 +13,30 @@ div.new-todo {
   margin-bottom: 5px;
 }
 
-div.new-todo > input {
+.new-todo > input {
   flex: 1 100%;
 }
 
-div.new-todo > button {
+.new-todo > button {
   margin-left: -1px;
+}
+
+.ng-valid[required],
+.ng-valid.required {
+  border-left: 5px solid #42a948;
+}
+
+.ng-invalid:not(form):not(.ng-pristine) {
+  border-left: 5px solid #a94442;
+}
+
+.error {
+  background-color: #ffdddd;
+  border: 1px solid #a94442;
+  padding: 5px;
+}
+
+input {
+  border: 1px solid #666;
+  padding: 2px;
 }
